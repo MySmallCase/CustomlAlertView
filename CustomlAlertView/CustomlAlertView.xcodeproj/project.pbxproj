@@ -15,6 +15,7 @@
 		1F1253511C706512003BF057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F12534F1C706512003BF057 /* LaunchScreen.storyboard */; };
 		1F12535C1C706512003BF057 /* CustomlAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12535B1C706512003BF057 /* CustomlAlertViewTests.m */; };
 		1F1253671C706512003BF057 /* CustomlAlertViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1253661C706512003BF057 /* CustomlAlertViewUITests.m */; };
+		1F1253771C706588003BF057 /* CommonAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1253761C706588003BF057 /* CommonAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		1F1253621C706512003BF057 /* CustomlAlertViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomlAlertViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F1253661C706512003BF057 /* CustomlAlertViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomlAlertViewUITests.m; sourceTree = "<group>"; };
 		1F1253681C706512003BF057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F1253751C706588003BF057 /* CommonAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonAlertView.h; sourceTree = "<group>"; };
+		1F1253761C706588003BF057 /* CommonAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		1F1253401C706512003BF057 /* CustomlAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				1F1253741C70654D003BF057 /* CustomAlertView */,
 				1F1253441C706512003BF057 /* AppDelegate.h */,
 				1F1253451C706512003BF057 /* AppDelegate.m */,
 				1F1253471C706512003BF057 /* ViewController.h */,
@@ -138,6 +142,15 @@
 				1F1253681C706512003BF057 /* Info.plist */,
 			);
 			path = CustomlAlertViewUITests;
+			sourceTree = "<group>";
+		};
+		1F1253741C70654D003BF057 /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				1F1253751C706588003BF057 /* CommonAlertView.h */,
+				1F1253761C706588003BF057 /* CommonAlertView.m */,
+			);
+			path = CustomAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1253771C706588003BF057 /* CommonAlertView.m in Sources */,
 				1F1253491C706512003BF057 /* ViewController.m in Sources */,
 				1F1253461C706512003BF057 /* AppDelegate.m in Sources */,
 				1F1253431C706512003BF057 /* main.m in Sources */,
