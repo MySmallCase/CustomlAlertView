@@ -157,11 +157,20 @@ CGFloat buttonSpacerHeight = 0;
     //给弹窗视图中添加UI和底部按钮
     UIView *dialogContainer = [[UIView alloc] initWithFrame:CGRectMake((screenSize.width - dialogSize.width) * 0.5, (screenSize.height - dialogSize.height) * 0.5, dialogSize.width, dialogSize.height)];
     
+    if (self.topCorner) {
+        UIRectCorner corner = UIRectCornerTopLeft | UIRectCornerTopRight;
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:dialogContainer.bounds byRoundingCorners:corner cornerRadii:CGSizeMake(CornerRadius, CornerRadius)];
+        CAShapeLayer *layer = [CAShapeLayer layer];
+        layer.path = path.CGPath;
+        dialogContainer.layer.mask = layer;
+    }
+    
+    
     //弹窗视图中间分割线
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, dialogContainer.bounds.size.height - buttonHeight - buttonSpacerHeight, dialogContainer.bounds.size.width, buttonSpacerHeight)];
     
     //内容和底部按钮分割线
-    lineView.backgroundColor = [UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f];
+    lineView.backgroundColor = self.lineViewColor ? self.lineViewColor : [UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f];
     [dialogContainer addSubview:lineView];
     
     //添加内容视图
@@ -217,7 +226,7 @@ CGFloat buttonSpacerHeight = 0;
         
         if (i != self.buttonTitles.count - 1 && !buttonBgColorCount) {
             UIView *verticalLine = [[UIView alloc] init];
-            verticalLine.backgroundColor = [UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f];
+            verticalLine.backgroundColor = self.verticalLineColor ? self.verticalLineColor : [UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f];
             verticalLine.frame = CGRectMake(CGRectGetMaxX(closeButton.frame), closeButton.frame.origin.y, 0.5, closeButton.frame.size.height);
             [container addSubview:verticalLine];
         }

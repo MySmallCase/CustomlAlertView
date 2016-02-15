@@ -30,6 +30,10 @@
 @property (nonatomic,strong) UIFont *buttonTextFont; /**< 按钮文字字体*/
 @property (nonatomic,strong) UIColor *buttonTextColor; /**< 按钮文字颜色*/
 @property (nonatomic,assign) BOOL clickedBgCloseAlertView; /**< 点击后面背景关闭弹窗  默认关闭*/
+@property (nonatomic,strong) UIColor *lineViewColor; /**< 内容和底部按钮分割线颜色 */
+@property (nonatomic,strong) UIColor *verticalLineColor; /**< 竖线颜色*/
+@property (nonatomic,assign) BOOL topCorner; /**< 顶部圆角*/
+
 
 @property (nonatomic,weak) id<CommonAlertViewDelegate> delegate; /**< 代理*/
 

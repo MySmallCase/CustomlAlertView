@@ -35,12 +35,13 @@
     CommonAlertView *alertView = [[CommonAlertView alloc] init];
     
     alertView.containerView = [self createDemoView];
-//    alertView.buttonTitles = @[@"残忍拒绝", @"任性投票", @"123"];
-//    alertView.buttonBgColors = @[[UIColor redColor],[UIColor blueColor],[UIColor greenColor]];
+    alertView.buttonTitles = @[@"残忍拒绝", @"任性投票", @"123"];
+    alertView.buttonBgColors = @[[UIColor redColor],[UIColor blueColor],[UIColor greenColor]];
     alertView.buttonTextFont = [UIFont boldSystemFontOfSize:11.0f];
     alertView.buttonTextColor = [UIColor redColor];
     alertView.delegate = self;
-    alertView.clickedBgCloseAlertView = YES;
+    alertView.topCorner = YES;
+//    alertView.clickedBgCloseAlertView = YES;
     [alertView show];
 }
 
@@ -55,7 +56,8 @@
 - (UIView *)createDemoView
 {
     UIView *demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 200)];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 290, 200)];
+    demoView.backgroundColor = [UIColor redColor];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 270, 180)];
     imageView.backgroundColor = [UIColor grayColor];
     [demoView addSubview:imageView];
     
