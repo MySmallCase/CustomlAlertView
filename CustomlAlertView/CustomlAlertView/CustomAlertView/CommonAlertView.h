@@ -34,6 +34,8 @@
 @property (nonatomic,strong) UIColor *verticalLineColor; /**< 竖线颜色*/
 @property (nonatomic,assign) BOOL topCorner; /**< 顶部圆角*/
 
+@property (nonatomic,assign) NSInteger time; /**< 多少秒弹窗自动消失  默认没有*/
+
 
 @property (nonatomic,weak) id<CommonAlertViewDelegate> delegate; /**< 代理*/
 

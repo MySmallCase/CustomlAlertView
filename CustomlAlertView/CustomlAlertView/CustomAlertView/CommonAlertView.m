@@ -105,6 +105,14 @@ CGFloat buttonSpacerHeight = 0;
         
     }];
     
+    if (self.time) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self close];
+        });
+    }
+    
+    
+    
 }
 
 // 点击按钮后调用代理

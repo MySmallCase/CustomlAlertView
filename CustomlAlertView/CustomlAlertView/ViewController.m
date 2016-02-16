@@ -41,6 +41,7 @@
     alertView.buttonTextColor = [UIColor redColor];
     alertView.delegate = self;
     alertView.topCorner = YES;
+//    alertView.time = 1.0f;
 //    alertView.clickedBgCloseAlertView = YES;
     [alertView show];
 }
