@@ -34,6 +34,7 @@ CGFloat buttonSpacerHeight = 0;
             
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureClick)];
             self.clickedBgCloseAlertView = NO;
+            self.isUseDelegate = NO;
             [self addGestureRecognizer:tapGesture];
             
         }
@@ -46,6 +47,11 @@ CGFloat buttonSpacerHeight = 0;
 - (void)tapGestureClick {
     if (self.clickedBgCloseAlertView == YES) {
         [self close];
+        if (self.isUseDelegate == YES) {
+            if (self.delegate != nil) {
+                [self.delegate alertViewWhenClose];
+            }
+        }
     }
     
 }
@@ -226,6 +232,11 @@ CGFloat buttonSpacerHeight = 0;
         UIColor *textColor = self.buttonTextColor ? self.buttonTextColor : [UIColor whiteColor];
         [closeButton setTitleColor:textColor forState:UIControlStateNormal];
         [closeButton setTitleColor:textColor forState:UIControlStateHighlighted];
+        
+        if (self.layerCorner) {
+            closeButton.layer.cornerRadius = self.layerCorner;
+            closeButton.layer.masksToBounds = YES;
+        }
         
         //按钮文字字体
         UIFont *textFont = self.buttonTextFont ? self.buttonTextFont : [UIFont boldSystemFontOfSize:14.0f];

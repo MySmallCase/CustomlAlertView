@@ -12,6 +12,10 @@
 
 - (void)customIOS7dialogButtonTouchUpInside:(id)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 
+@optional
+
+- (void)alertViewWhenClose;
+
 @end
 
 @interface CommonAlertView : UIView<CommonAlertViewDelegate>
@@ -35,6 +39,8 @@
 @property (nonatomic,assign) BOOL topCorner; /**< 顶部圆角*/
 
 @property (nonatomic,assign) NSInteger time; /**< 多少秒弹窗自动消失  默认没有*/
+@property (nonatomic,assign) CGFloat layerCorner; /**< 设置圆角*/
+@property (nonatomic, assign) BOOL isUseDelegate; /**< 是否使用代理*/
 
 
 @property (nonatomic,weak) id<CommonAlertViewDelegate> delegate; /**< 代理*/

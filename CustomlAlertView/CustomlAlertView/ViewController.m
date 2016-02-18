@@ -36,11 +36,12 @@
     
     alertView.containerView = [self createDemoView];
     alertView.buttonTitles = @[@"残忍拒绝", @"任性投票", @"123"];
-    alertView.buttonBgColors = @[[UIColor redColor],[UIColor blueColor],[UIColor greenColor]];
+    alertView.buttonBgColors = @[[UIColor colorWithRed:197/255.0 green:197/255.0 blue:197/255.0 alpha:1.0f],[UIColor blueColor],[UIColor greenColor]];
     alertView.buttonTextFont = [UIFont boldSystemFontOfSize:11.0f];
     alertView.buttonTextColor = [UIColor redColor];
     alertView.delegate = self;
     alertView.topCorner = YES;
+    alertView.layerCorner = 5.0f;
 //    alertView.time = 1.0f;
 //    alertView.clickedBgCloseAlertView = YES;
     [alertView show];
